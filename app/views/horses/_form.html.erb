@@ -1,0 +1,77 @@
+<%= form_for(@horse) do |f| %>
+  <% if @horse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@horse.errors.count, "error") %> prohibited this horse from being saved:</h2>
+
+      <ul>
+      <% @horse.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :nick %><br>
+    <%= f.text_field :nick %>
+  </div>
+  <div class="field">
+    <%= f.label :birth %><br>
+    <%= f.date_select :birth %>
+  </div>
+  <div class="field">
+    <%= f.label :height %><br>
+    <%= f.number_field :height %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.number_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :color_id %><br>
+    <%= f.number_field :color_id %>
+  </div>
+  <div class="field">
+    <%= f.label :dentist %><br>
+    <%= f.text_field :dentist %>
+  </div>
+  <div class="field">
+    <%= f.label :vet %><br>
+    <%= f.text_field :vet %>
+  </div>
+  <div class="field">
+    <%= f.label :blacksmith %><br>
+    <%= f.text_field :blacksmith %>
+  </div>
+  <div class="field">
+    <%= f.label :osteopath %><br>
+    <%= f.text_field :osteopath %>
+  </div>
+  <div class="field">
+    <%= f.label :blanket_size %><br>
+    <%= f.number_field :blanket_size %>
+  </div>
+  <div class="field">
+    <%= f.label :strap_size %><br>
+    <%= f.number_field :strap_size %>
+  </div>
+  <div class="field">
+    <%= f.label :horsebit_size %><br>
+    <%= f.number_field :horsebit_size %>
+  </div>
+  <div class="field">
+    <%= f.label :bridle_size %><br>
+    <%= f.number_field :bridle_size %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br>
+    <%= f.text_area :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

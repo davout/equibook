@@ -1,0 +1,36 @@
+fr:
+
+  activerecord:
+    models:
+      horse:
+        one: Cheval
+        other: Chevaux
+      color:
+        one: Couleur
+        other: Couleurs
+      gender:
+        one: Genre
+        other: Genres
+
+    attributes:
+      horse:
+        name: Nom complet
+        nick: Surnom
+        gender: Genre
+        color: Couleur
+        birth: Date de naissance
+        height: Taille
+        vet: Vétérinaire
+        blacksmith: Maréchal ferrant
+        dentist: Dentiste
+        osteopath: Ostéopathe
+        blanket_size: Taille de couverture
+        bridle_size: Taille de filet
+        horsebit_size: Taille de mors
+        strap_size: Taille de sangle
+        comment: Commentaire
+      color:
+        name: Nom
+      gender:
+        name: Nom
+

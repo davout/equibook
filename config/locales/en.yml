@@ -1,0 +1,36 @@
+en:
+
+  activerecord:
+    models:
+      horse:
+        one: Horse
+        other: Horses
+      color:
+        one: Color
+        other: Colors
+      gender:
+        one: Gender
+        other: Genders
+
+    attributes:
+      horse:
+        name: Full name
+        nick: Nick name
+        gender: Gender
+        color: Color
+        birth: Date of birth
+        height: Height
+        vet: Vet
+        blacksmith: Blacksmith
+        dentist: Dentist
+        osteopath: Osteopath
+        blanket_size: Blanket size
+        bridle_size: Bridle size
+        horsebit_size: Horsebit size
+        strap_size: Strap size
+        comment: Comment
+      color:
+        name: Name
+      gender:
+        name: Name
+
