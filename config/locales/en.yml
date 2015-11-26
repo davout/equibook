@@ -28,6 +28,9 @@ en:
 
   activerecord:
     models:
+      user:
+        one: User
+        other: Users
       horse:
         one: Horse
         other: Horses
@@ -39,6 +42,10 @@ en:
         other: Genders
 
     attributes:
+      user:
+        email: E-mail address
+        admin: Administrator
+        created_at: Created at
       horse:
         name: Full name
         nick: Nick name

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :horses
 
   namespace :admin do
-    %w{horses colors genders}.each do |res|
+    %w{ users horses colors genders }.each do |res|
       resources(res) { as_routes }
     end
   end

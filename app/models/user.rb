@@ -5,4 +5,12 @@ class User < ActiveRecord::Base
 
   has_and_belongs_to_many :horses
 
+  validates :email,
+    presence: true,
+    uniqueness: true
+
+  def to_label
+    email
+  end
+
 end

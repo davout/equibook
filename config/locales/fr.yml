@@ -28,6 +28,9 @@ fr:
 
   activerecord:
     models:
+      user:
+        one: Utilisateur
+        other: Utilisateurs
       horse:
         one: Cheval
         other: Chevaux
@@ -39,6 +42,10 @@ fr:
         other: Genres
 
     attributes:
+      user:
+        email: Adresse e-mail
+        admin: Administrateur
+        created_at: Création
       horse:
         name: Nom
         nick: Surnom
