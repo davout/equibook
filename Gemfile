@@ -18,6 +18,7 @@ gem 'omniauth-facebook'
 
 gem 'capistrano'
 gem 'capistrano-rails'
+gem 'capistrano-passenger'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
