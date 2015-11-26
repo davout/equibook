@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_title
-    @title = "CavaConnect"
+    @title = "EquiBook"
   end
 
   def after_sign_in_path_for(resource)

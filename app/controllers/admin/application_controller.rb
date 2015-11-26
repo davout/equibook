@@ -9,7 +9,7 @@ class Admin::ApplicationController < ApplicationController
   end
 
   def set_title
-    @title = "CavaConnect admin"
+    @title = "EquiBook admin"
   end
 
 end

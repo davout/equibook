@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'equibook'
-set :repo_url, 'git@bitbucket.org:davout/cavaconnect.git'
+set :repo_url, 'git@bitbucket.org:davout/equibook.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
