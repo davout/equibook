@@ -18,6 +18,7 @@ gem 'devise-i18n-views'
 gem 'omniauth-facebook'
 
 gem 'capistrano'
+gem 'capistrano-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
