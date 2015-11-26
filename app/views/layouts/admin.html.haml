@@ -1,0 +1,8 @@
+= render layout: 'layouts/header' do
+  %ul.nav.nav-pills
+    - %w{ horse color gender }.each do |i|
+      %li{ class: (request.path =~ /#{i}/) && "active" }= link_to(t("activerecord.models.#{i}.other"), send(:"admin_#{i}s_path"))
+
+  = render 'layouts/notices'
+  = yield
+

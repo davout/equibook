@@ -1,0 +1,77 @@
+%p
+  %strong= "#{t('activerecord.attributes.horse.name')} : "
+  = @horse.name
+
+
+%p
+  %strong= "#{t('activerecord.attributes.horse.nick')} : "
+  = @horse.nick
+
+
+%p
+  %strong= "#{t('activerecord.attributes.horse.birth')} : "
+  = @horse.birth
+
+
+%p
+  %strong= "#{t('activerecord.attributes.horse.height')} : "
+  = @horse.height
+
+
+%p
+  %strong= "#{t('activerecord.attributes.horse.gender')} : "
+  = @horse.gender.name
+
+
+%p
+  %strong= "#{t('activerecord.attributes.horse.color')} : "
+  = @horse.color.name
+
+
+%p
+  %strong= "#{t('activerecord.attributes.horse.dentist')} : "
+  = @horse.dentist
+
+
+%p
+  %strong= "#{t('activerecord.attributes.horse.vet')} : "
+  = @horse.vet
+
+
+%p
+  %strong= "#{t('activerecord.attributes.horse.blacksmith')} : "
+  = @horse.blacksmith
+
+
+%p
+  %strong= "#{t('activerecord.attributes.horse.osteopath')} : "
+  = @horse.osteopath
+
+
+%p
+  %strong= "#{t('activerecord.attributes.horse.blanket_size')} : "
+  = @horse.blanket_size
+
+
+%p
+  %strong= "#{t('activerecord.attributes.horse.strap_size')} : "
+  = @horse.strap_size
+
+
+%p
+  %strong= "#{t('activerecord.attributes.horse.horsebit_size')} : "
+  = @horse.horsebit_size
+
+
+%p
+  %strong= "#{t('activerecord.attributes.horse.bridle_size')} : "
+  = @horse.bridle_size
+
+
+%p
+  %strong= "#{t('activerecord.attributes.horse.comment')} : "
+  = @horse.comment
+
+
+= link_to t('.edit'), edit_horse_path(@horse) |
+= link_to t('.back'), horses_path

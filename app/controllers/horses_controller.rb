@@ -25,10 +25,11 @@ class HorsesController < ApplicationController
   # POST /horses.json
   def create
     @horse = Horse.new(horse_params)
+    @horse.users << current_user
 
     respond_to do |format|
       if @horse.save
-        format.html { redirect_to @horse, notice: 'Horse was successfully created.' }
+        format.html { redirect_to @horse, notice: t('.created') }
         format.json { render :show, status: :created, location: @horse }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class HorsesController < ApplicationController
   def update
     respond_to do |format|
       if @horse.update(horse_params)
-        format.html { redirect_to @horse, notice: 'Horse was successfully updated.' }
+        format.html { redirect_to @horse, notice: t('.updated') }
         format.json { render :show, status: :ok, location: @horse }
       else
         format.html { render :edit }
@@ -56,19 +57,20 @@ class HorsesController < ApplicationController
   def destroy
     @horse.destroy
     respond_to do |format|
-      format.html { redirect_to horses_url, notice: 'Horse was successfully destroyed.' }
+      format.html { redirect_to horses_url, notice: t('.destroyed') }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_horse
-      @horse = Horse.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_horse
+    @horse = Horse.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def horse_params
-      params.require(:horse).permit(:name, :nick, :birth, :height, :gender, :color_id, :dentist, :vet, :blacksmith, :osteopath, :blanket_size, :strap_size, :horsebit_size, :bridle_size, :comment)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def horse_params
+    params.require(:horse).permit(:name, :nick, :birth, :height, :gender_id, :color_id, :dentist, :vet, :blacksmith, :osteopath, 
+                                  :blanket_size, :strap_size, :horsebit_size, :bridle_size, :comment)
+  end
 end

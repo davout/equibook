@@ -3,7 +3,10 @@ class Horse < ActiveRecord::Base
   belongs_to :gender
   belongs_to :color
 
-  validates :gender, presence: true
-  validates :color, presence: true
+  has_and_belongs_to_many :users
+
+  validates :name, :gender, :color, :birth,
+    presence: true
 
 end
+

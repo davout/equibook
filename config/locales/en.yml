@@ -1,5 +1,31 @@
 en:
 
+  layouts:
+    header:
+      sign_out: Logout
+      sign_in: Sign-in
+
+  horses:
+    index:
+      your_horses: Your horses
+      you_have_horses: You have %{count} hawrses.
+      add_new_horse: Add a new one
+    new:
+      new_horse: New hawrse
+    show:
+      back: Back
+      edit: Edit
+    form:
+      back: Back
+    edit:
+      edit: "Edit %{name}"
+    create:
+      created: Horse added successfully!
+    update:
+      updated: Horse data updated successfully.
+    destroy:
+      destroyed: Horse deleted.
+
   activerecord:
     models:
       horse:

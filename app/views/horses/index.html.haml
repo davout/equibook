@@ -1,0 +1,11 @@
+%h1= t('.your_horses')
+%p= t('.you_have_horses', count: @horses.count)
+
+- if @horses.count > 0
+  - @horses.each do |h|
+    %ul
+      %li= link_to h.name, h
+
+%p
+  = link_to t('.add_new_horse'), new_horse_path
+

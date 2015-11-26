@@ -12,6 +12,12 @@ gem 'active_scaffold', github: 'activescaffold/active_scaffold'
 
 gem 'jquery-ui-rails'
 
+gem 'devise', github: 'plataformatec/devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+gem 'omniauth-facebook'
+
+gem 'capistrano'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
