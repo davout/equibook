@@ -4,7 +4,7 @@ class HorsesController < ApplicationController
   # GET /horses
   # GET /horses.json
   def index
-    @horses = Horse.all
+    @horses = current_user.horses
   end
 
   # GET /horses/1
