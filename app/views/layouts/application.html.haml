@@ -2,3 +2,6 @@
   = render 'layouts/notices'
   = yield
 
+  - if GA.tracker
+    = analytics_init
+

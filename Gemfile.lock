@@ -90,6 +90,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    google-analytics-rails (0.0.6)
     haml (4.0.6)
       tilt
     hashie (3.4.3)
@@ -221,6 +222,7 @@ DEPENDENCIES
   devise!
   devise-i18n
   devise-i18n-views
+  google-analytics-rails
   haml
   jbuilder (~> 2.0)
   jquery-rails
