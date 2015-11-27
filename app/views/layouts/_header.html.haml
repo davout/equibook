@@ -13,7 +13,7 @@
       #session-links.pull-right
         - if current_user
           - if current_user.fb_image
-            = image_tag current_user.fb_image, alt: current_user.name, title: current_user.name, id: 'fb_avatar'
+            = image_tag current_user.fb_image, alt: current_user.name, title: current_user.name, class: 'fb_avatar'
           = link_to t('.sign_out'), destroy_user_session_path, method: :delete
           - if current_user.admin?
             = " - "

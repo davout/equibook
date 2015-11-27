@@ -47,6 +47,10 @@ fr:
         email: Adresse e-mail
         admin: Administrateur
         created_at: Création
+        provider: Provider
+        uid: Facebook UID
+        fb_image: Avatar Facebook
+        name: Nom
       horse:
         name: Nom
         nick: Surnom

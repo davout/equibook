@@ -47,6 +47,10 @@ en:
         email: E-mail address
         admin: Administrator
         created_at: Created at
+        provider: Provider
+        uid: Facebook UID
+        fb_image: Facebook image
+        name: Name
       horse:
         name: Full name
         nick: Nick name
