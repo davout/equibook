@@ -1,5 +1,11 @@
 class Horse < ActiveRecord::Base
 
+  CATEGORIES = [
+    [1000, :cheval_de_troie],
+    [100, :chti_poney],
+    [10, :mini_poney]
+  ]
+
   belongs_to :gender
   belongs_to :color
 
@@ -7,6 +13,10 @@ class Horse < ActiveRecord::Base
 
   validates :name, :gender, :color, :birth,
     presence: true
+
+  def category
+    (height && CATEGORIES.find { |c| height >= c[0] }[1]) || :unknown
+  end
 
 end
 

@@ -1,10 +1,13 @@
 class Admin::HorsesController < Admin::ApplicationController
   active_scaffold :horse do |config|
 
-    config.columns = [:name, :nick, :gender, :color, :birth, :height, :vet, :blacksmith, :dentist,
+    config.columns = [:name, :nick, :gender, :color, :birth, :height, :category, :vet, :blacksmith, :dentist,
                       :osteopath, :blanket_size, :bridle_size, :horsebit_size, :strap_size, :comment]
 
-    config.list.columns = [:name, :nick, :gender, :color, :birth]
+    config.list.columns = [:name, :nick, :gender, :category, :color, :birth]
+
+config.update.columns.exclude :category
+config.create.columns.exclude :category
 
     config.columns[:color].form_ui = :select
     config.columns[:color].actions_for_association_links = [:show]

@@ -51,9 +51,12 @@ fr:
         name: Nom
         nick: Surnom
         gender: Genre
+        gender_id: Genre
         color: Couleur
+        color_id: Couleur
         birth: Date de naissance
         height: Taille
+        category: Catégorie
         vet: Vétérinaire
         blacksmith: Maréchal ferrant
         dentist: Dentiste
@@ -67,6 +70,13 @@ fr:
         name: Nom
       gender:
         name: Nom
+
+    extra:
+      horse_categories:
+       unknown: Inconnu
+       mini_poney: Mini poney
+       chti_poney: Poney moyen
+       cheval_de_troie: Chlave de Troie
 
   devise:
     confirmations:

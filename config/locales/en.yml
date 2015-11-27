@@ -51,9 +51,12 @@ en:
         name: Full name
         nick: Nick name
         gender: Gender
+        gender_id: Gender
         color: Color
+        color_id: Color
         birth: Date of birth
         height: Height
+        category: Category
         vet: Vet
         blacksmith: Blacksmith
         dentist: Dentist
@@ -67,4 +70,11 @@ en:
         name: Name
       gender:
         name: Name
+    
+    extra:
+      horse_categories:
+       unknown: Unknown
+       mini_poney: Mini Pony
+       chti_poney: Medium Pony
+       cheval_de_troie: Trojan horse
 

@@ -21,7 +21,10 @@
         - else
           = link_to t('.sign_in'), new_user_session_path
 
-      %h1#title= @title
+
+      %h1#title
+        = link_to root_path do
+          %span= @title
 
       = yield
 
