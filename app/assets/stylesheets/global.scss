@@ -1,3 +1,5 @@
+@import 'bootstrap';
+
 #error_explanation {
 	h3 {
 		margin-top: 0;
@@ -7,3 +9,15 @@
 .fb_avatar {
 	border-radius: 4px;
 }
+
+.form-horizontal {
+	select.date {
+		width: 30%;
+		display: inline;
+	}
+
+	input[type=submit] {
+		@extend .col-sm-offset-2;
+	}
+}
+

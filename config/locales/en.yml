@@ -1,5 +1,14 @@
 en:
 
+  simple_form:
+    'yes': 'Yes'
+    'no': 'No'
+    required:
+      text: 'Required field'
+      mark: '*'
+    error_notification:
+      default_message: 'Please review the problems below'
+
   layouts:
     header:
       sign_out: Logout
@@ -18,6 +27,8 @@ en:
       edit: Edit
     form:
       back: Back
+      pick_a_color: Pick a color
+      pick_a_gender: Pick a gender
     edit:
       edit: "Edit %{name}"
     create:

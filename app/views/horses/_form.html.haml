@@ -1,91 +1,24 @@
-//= simple_form_for(@horse, html: { class: 'form-horizontal' }) do |f|
-= form_for(@horse, html: { class: 'horse-form' }) do |f|
+= simple_form_for(@horse, html: { class: 'form-horizontal' }) do |f|
 
-  = error_messages!(@horse)
+  = f.error_notification
 
-  .control-row
-    = f.label :name
-    .control
-      = f.text_field :name
+  = f.input :name
+  = f.input :nick
+  = f.input :birth, as: :date
+  = f.input :height
+  = f.association :color, prompt: t('.pick_a_color')
+  = f.association :gender, prompt: t('.pick_a_gender')
+  = f.input :dentist
+  = f.input :vet
+  = f.input :blacksmith
+  = f.input :osteopath
+  = f.input :blanket_size
+  = f.input :strap_size
+  = f.input :bridle_size
+  = f.input :blanket_size
+  = f.input :horsebit_size
+  = f.input :comment
 
-  .control-row
-    = f.label :nick
-    .control
-      = f.text_field :nick
-
-  .control-row
-    = f.label :birth
-    .control
-      = f.date_select :birth
-
-  .control-row
-    = f.label :height
-    .control
-      = f.number_field :height
-
-  .control-row
-    = f.label :color_id
-    .control
-      = f.collection_select(:color_id, Color.all, :id, :name)
-
-  .control-row
-    = f.label :gender_id
-    .control
-      = f.collection_select(:gender_id, Gender.all, :id, :name)
-
-  .control-row
-    = f.label :dentist
-    .control
-      = f.text_field :dentist
-
-  .control-row
-    = f.label :vet
-    .control
-      = f.text_field :vet
-
-  .control-row
-    = f.label :blacksmith
-    .control
-      = f.text_field :blacksmith
-
-  .control-row
-    = f.label :osteopath
-    .control
-      = f.text_field :osteopath
-
-  .control-row
-    = f.label :blanket_size
-    .control
-      = f.number_field :blanket_size
-
-  .control-row
-    = f.label :strap_size
-    .control
-      = f.number_field :strap_size
-
-  .control-row
-    = f.label :bridle_size
-    .control
-      = f.number_field :bridle_size
-
-  .control-row
-    = f.label :blanket_size
-    .control
-      = f.number_field :blanket_size
-
-  .control-row
-    = f.label :horsebit_size
-    .control
-      = f.number_field :blanket_size
-
-  .control-row
-    = f.label :comment
-    .control
-      = f.text_area :comment
-
-  .control-row
-    .actions
-      = f.submit
-      = link_to t('.back'), horses_path
+  = f.button :submit
 
 

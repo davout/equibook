@@ -1,5 +1,14 @@
 fr:
 
+  simple_form:
+    'yes': 'Oui'
+    'no': 'Non'
+    required:
+      text: 'Champ requis'
+      mark: '*'
+    error_notification:
+      default_message: 'Vous devez corriger les erreurs ci-dessous'
+
   layouts:
     header:
       sign_out: Déconnexion
@@ -18,6 +27,8 @@ fr:
       edit: Editer
     form:
       back: Retour
+      pick_a_color: Choisissez une couleur
+      pick_a_gender: Choisissez un genre
     edit:
       edit: "Editer %{name}"
     create:
