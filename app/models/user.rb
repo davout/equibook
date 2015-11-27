@@ -11,17 +11,24 @@ class User < ActiveRecord::Base
     uniqueness: true
 
   def to_label
-    email
+    name || email
   end
 
   def self.from_omniauth(auth)
-    # If user has the same e-mail we should handle it gracefully (?)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-      user.email = auth.info.email
+    user = User.where(email: auth.info.email.downcase).first ||
+      where(provider: auth.provider, uid: auth.uid).first_or_create
+
+    user.email    = auth.info.email
+    user.name     = auth.info.name
+    user.fb_image = auth.info.image
+    user.provider = auth.provider
+    user.uid      = auth.uid
+
+    unless user.encrypted_password
       user.password = Devise.friendly_token[0,20]
-      user.name = auth.info.name   # assuming the user model has a name
-      user.fb_image = auth.info.image # assuming the user model has an image
     end
+
+    user
   end
 
 end

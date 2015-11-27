@@ -10,8 +10,10 @@
   %body
     .container
 
-      .session-links.pull-right
+      #session-links.pull-right
         - if current_user
+          - if current_user.fb_image
+            = image_tag current_user.fb_image, alt: current_user.name, title: current_user.name, id: 'fb_avatar'
           = link_to t('.sign_out'), destroy_user_session_path, method: :delete
         - else
           = link_to t('.sign_in'), new_user_session_path
