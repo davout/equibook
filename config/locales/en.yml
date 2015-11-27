@@ -4,6 +4,7 @@ en:
     header:
       sign_out: Logout
       sign_in: Sign-in
+      admin: Admin
 
   horses:
     index:

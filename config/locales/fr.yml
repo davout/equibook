@@ -4,6 +4,7 @@ fr:
     header:
       sign_out: Déconnexion
       sign_in: Connexion
+      admin: Administration
 
   horses:
     index:
