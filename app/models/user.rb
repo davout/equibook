@@ -24,10 +24,11 @@ class User < ActiveRecord::Base
     user.provider = auth.provider
     user.uid      = auth.uid
 
-    unless user.encrypted_password
+    if user.new_record?
       user.password = Devise.friendly_token[0,20]
     end
 
+    user.save
     user
   end
 
