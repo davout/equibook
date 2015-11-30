@@ -25,6 +25,8 @@ group :development, :test do
   gem 'capistrano-passenger'
   gem 'rspec-rails'
   gem 'simplecov'
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :development do
