@@ -23,6 +23,8 @@ group :development, :test do
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
+  gem 'rspec-rails'
+  gem 'simplecov'
 end
 
 group :development do
