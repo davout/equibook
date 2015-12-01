@@ -27,6 +27,7 @@ group :development, :test do
   gem 'simplecov'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'recursive-open-struct'
 end
 
 group :development do

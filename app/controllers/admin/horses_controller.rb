@@ -6,8 +6,8 @@ class Admin::HorsesController < Admin::ApplicationController
 
     config.list.columns = [:name, :nick, :gender, :category, :color, :birth]
 
-config.update.columns.exclude :category
-config.create.columns.exclude :category
+    config.update.columns.exclude :category
+    config.create.columns.exclude :category
 
     config.columns[:color].form_ui = :select
     config.columns[:color].actions_for_association_links = [:show]
@@ -16,5 +16,6 @@ config.create.columns.exclude :category
     config.columns[:gender].actions_for_association_links = [:show]
 
     config.columns[:birth].form_ui = :date_picker
+
   end
 end
