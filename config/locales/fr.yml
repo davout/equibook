@@ -92,6 +92,7 @@ fr:
        mini_poney: Mini poney
        chti_poney: Poney moyen
        cheval_de_troie: Chlave de Troie
+       nain: Nain
 
   devise:
     confirmations:

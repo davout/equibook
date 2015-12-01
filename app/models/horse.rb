@@ -3,7 +3,8 @@ class Horse < ActiveRecord::Base
   CATEGORIES = [
     [1000, :cheval_de_troie],
     [100, :chti_poney],
-    [10, :mini_poney]
+    [10, :mini_poney],
+    [0, :nain]
   ]
 
   belongs_to :gender
