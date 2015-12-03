@@ -1,1 +1,6 @@
+FEATURES
 - Destroying horses should be reserved to owners
+
+BUGS
+- Erroneous message "Aleady signed in" when signing in
+
