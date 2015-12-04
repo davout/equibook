@@ -25,6 +25,7 @@ class HorsesController < ApplicationController
   # POST /horses.json
   def create
     @horse = Horse.new(horse_params)
+    @horse.owner = current_user
     @horse.users << current_user
 
     respond_to do |format|

@@ -69,6 +69,8 @@ fr:
         gender_id: Genre
         color: Couleur
         color_id: Couleur
+        owner: Propriétaire
+        owner_id: Propriétaire
         birth: Date de naissance
         height: Taille
         category: Catégorie

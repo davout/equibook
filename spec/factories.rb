@@ -18,6 +18,7 @@ FactoryGirl.define do
     nick          { Faker::Name.first_name }
     height        50
     birth         { Date.today }
+    owner         factory: :user
     color
     gender
   end

@@ -9,10 +9,11 @@ class Horse < ActiveRecord::Base
 
   belongs_to :gender
   belongs_to :color
+  belongs_to :owner, class_name: :User
 
   has_and_belongs_to_many :users
 
-  validates :name, :gender, :color, :birth,
+  validates :name, :gender, :color, :birth, :owner,
     presence: true
 
   def category

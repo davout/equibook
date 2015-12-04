@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151126195122) do
+ActiveRecord::Schema.define(version: 20151203084247) do
 
   create_table "colors", force: :cascade do |t|
     t.string   "name"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20151126195122) do
     t.text     "comment"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "owner_id"
   end
 
   create_table "horses_users", id: false, force: :cascade do |t|

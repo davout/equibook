@@ -69,6 +69,8 @@ en:
         gender_id: Gender
         color: Color
         color_id: Color
+        owner: Owner
+        owner_id: Owner
         birth: Date of birth
         height: Height
         category: Category
