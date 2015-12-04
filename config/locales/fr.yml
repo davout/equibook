@@ -25,6 +25,7 @@ fr:
     show:
       back: Retour
       edit: Editer
+      activities: Activités
     form:
       back: Retour
       pick_a_color: Choisissez une couleur
@@ -40,6 +41,9 @@ fr:
 
   activerecord:
     models:
+      activity:
+        one: Activité
+        other: Activités
       user:
         one: Utilisateur
         other: Utilisateurs
@@ -54,6 +58,12 @@ fr:
         other: Genres
 
     attributes:
+      activity:
+        title: Titre
+        user: Auteur
+        start_at: Début
+        end_at: Fin
+        description: Description
       user:
         email: Adresse e-mail
         admin: Administrateur

@@ -20,5 +20,8 @@ class Admin::HorsesController < Admin::ApplicationController
 
     config.columns[:birth].form_ui = :date_picker
 
+    config.nested.add_link(:activities)
+
   end
 end
+

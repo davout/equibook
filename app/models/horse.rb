@@ -13,6 +13,8 @@ class Horse < ActiveRecord::Base
 
   has_and_belongs_to_many :users
 
+  has_many :activities
+
   validates :name, :gender, :color, :birth, :owner,
     presence: true
 

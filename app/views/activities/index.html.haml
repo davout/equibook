@@ -1,0 +1,29 @@
+%h1 Listing Activities
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Horse
+      %th User
+      %th Start at
+      %th End at
+      %th Title
+      %th Description
+      %th{ colspan: 3 }
+
+  %tbody
+    - @activities.each do |activity|
+      %tr
+        %td= activity.horse_id
+        %td= activity.user_id
+        %td= activity.start_at
+        %td= activity.end_at
+        %td= activity.title
+        %td= activity.description
+        %td= link_to 'Show', horse_activity_path(@horse, activity)
+        %td= link_to 'Edit', edit_horse_activity_path(@horse, activity)
+        %td= link_to 'Destroy', horse_activity_path(@horse, activity), method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Activity', new_horse_activity_path(@horse)
