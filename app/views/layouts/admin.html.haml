@@ -4,5 +4,6 @@
       %li{ class: (request.path =~ /#{i}/) && "active" }= link_to(t("activerecord.models.#{i}.other"), send(:"admin_#{i}s_path"))
 
   = render 'layouts/notices'
+
   = yield
 

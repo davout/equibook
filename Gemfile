@@ -17,9 +17,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'google-analytics-rails'
 gem 'simple_form'
+gem 'wysiwyg-rails'
 
 group :development, :test do
   gem 'byebug'
+  gem 'spring'
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
