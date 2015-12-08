@@ -1,7 +1,7 @@
 class DatetimepickerInput < DatepickerInput
 
-  def format_string
-    '%Y-%m-%d %H:%M'
+  def pretty_format_string
+    I18n.t('time.formats.default')
   end
 
 end

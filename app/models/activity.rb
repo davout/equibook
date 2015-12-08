@@ -17,7 +17,6 @@ class Activity < ActiveRecord::Base
   # @return [Boolean] Whether edit is allowed
   #
   def editable_by?(u)
-    byebug
     u && (u == self.user)
   end
 

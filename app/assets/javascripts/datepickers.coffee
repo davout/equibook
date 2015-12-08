@@ -9,34 +9,20 @@ default_opts = {}
 
 # Add localisation properties
 $.extend(default_opts, $.datepicker.regional[$.current_locale], {
-  dateFormat: 'yy-mm-dd'
-  timeFormat: 'HH:mm'
   onSelect: (date_text, inst) ->
-
-    # Currently selected date object
-    console.log($(this).datepicker('getDate'))
+    showOn: 'button'
+    buttonText: 'prout'
+    selected_date = $(this).datepicker('getDate')
+    if selected_date != null
+      date_str = $.datepicker.formatDate('yy-mm-dd', selected_date)
+      date_str = date_str + ' ' + ('0' + selected_date.getHours()).slice(-2)
+      date_str = date_str + ':' + ('0' + selected_date.getMinutes()).slice(-2)
+      $('#' + this.id.replace('_pretty', '')).val(date_str)
 
   controlType: 'select'
 })
 
 $.datepicker.setDefaults(default_opts)
-
-console.log(default_opts)
-
-
-$('.picker_trigger').click ->
-  hidden_elt = $('#' + this.id.replace('_pretty', ''))
-  #hidden_elt.left = 0
-  #hidden_elt.top = 0
-  console.log($(this).offset())
-
-  console.log(hidden_elt)
-
-  hidden_elt.offset = ->
-    $(this).offset()
-
-  console.log(hidden_elt.offset())
-  hidden_elt.datepicker('show')
 
 $('input.datepicker').datepicker(default_opts)
 $('input.datetimepicker').datetimepicker(default_opts)
