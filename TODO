@@ -4,3 +4,9 @@ FEATURES
 BUGS
 - Erroneous message "Aleady signed in" when signing in
 
+- Check that dates are correctly rendered/recorded from UTC
+
+Activities
+ - Editable by admin & author
+ - Enforce edit rights
+ - Assign authors correctly

@@ -1,28 +1,13 @@
+.activity
+  %h1= @activity.title
+  .author= @activity.user.name
 
-%p
-  %strong Horse:
-  = @activity.horse_id
+  .bounds
+    = @activity.start_at
+    = '-'
+    = @activity.end_at
 
-%p
-  %strong User:
-  = @activity.user_id
+  .description!= @activity.description
 
-%p
-  %strong Start at:
-  = @activity.start_at
-
-%p
-  %strong End at:
-  = @activity.end_at
-
-%p
-  %strong Title:
-  = @activity.title
-
-%p
-  %strong Description:
-  = @activity.description
-
-= link_to 'Edit', edit_horse_activity_path(@horse, @activity)
-|
-= link_to 'Back', horse_activities_path(@horse)
+  = if @activity.editable_by? current_user
+    = link_to t('.edit'), edit_horse_activity_path(@horse, @activity)

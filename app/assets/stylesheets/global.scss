@@ -21,3 +21,5 @@
 	}
 }
 
+// Otherwise, the rich text editor goes over the datepickers
+.fr-box { z-index: 1; }

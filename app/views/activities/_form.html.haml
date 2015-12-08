@@ -1,11 +1,11 @@
-= simple_form_for(horse_activity_path(@horse, @activity), html: { class: 'form-horizontal' }) do |f|
+= simple_form_for([@horse, @activity], html: { class: 'form-horizontal' }) do |f|
 
   = f.error_notification
 
   = f.input :title
-  = f.input :start_at
-  = f.input :end_at
-  = f.text_area :description
+  = f.input :start_at, as: :datetimepicker
+  = f.input :end_at, as: :datepicker
+  = f.input :description, class: :richtext, as: :text
 
   = f.button :submit
 
