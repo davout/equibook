@@ -21,9 +21,17 @@
 #= require plugins/url.min.js
 #= require plugins/video.min.js
 
+fr_default_opts = {
+  imageUploadURL:     '/images'
+  imageUploadMethod:  'POST'
+  imageUploadParams: {
+    'authenticity_token': $('meta[name=csrf-token]').attr('content')
+  }
+}
+
 
 # Enable Froala editor
-$('textarea.text').froalaEditor()
+$('textarea.text').froalaEditor(fr_default_opts)
 
 # Hide license
 $('a[href="https://froala.com/wysiwyg-editor"]').remove()
