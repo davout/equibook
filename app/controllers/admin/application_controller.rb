@@ -1,6 +1,6 @@
 class Admin::ApplicationController < ApplicationController
 
-  before_filter :ensure_admin
+  before_filter :ensure_admin, :require_admin_assets
 
   layout 'admin'
 
@@ -10,6 +10,10 @@ class Admin::ApplicationController < ApplicationController
 
   def set_title
     @title = "EquiBook admin"
+  end
+
+  def require_admin_assets
+    @require_admin_assets = true
   end
 
 end

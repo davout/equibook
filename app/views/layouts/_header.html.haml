@@ -3,7 +3,12 @@
 %html{ lang: I18n.locale }
   %head
     %title= @title
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+
+    - if @require_admin_assets
+      = stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track' => true
+    - else
+      = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+
     = csrf_meta_tags
 
   %body
@@ -27,5 +32,11 @@
 
       = yield
 
-      = javascript_include_tag 'application', 'data-turbolinks-track' => true
+
+      - if @require_admin_assets
+        = javascript_include_tag 'admin', 'data-turbolinks-track' => true
+      - else
+        = javascript_include_tag 'application', 'data-turbolinks-track' => true
+
+
 

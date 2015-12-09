@@ -19,6 +19,7 @@ class ActivitiesController < ApplicationController
 
   def create
     @activity = @horse.activities.new(activity_params)
+    @activity.user = current_user
 
     respond_to do |format|
       if @activity.save
