@@ -39,6 +39,21 @@ en:
     destroy:
       destroyed: Horse deleted.
 
+  activities:
+    index:
+      title: "%{horse}'s activities"
+      add: New activity for %{horse}
+
+    edit:
+      title: "Edit \"%{activity}\""
+
+    new:
+      add: New activity for %{horse}
+
+    activity:
+      by: "By %{author}, on %{on}"
+      edit: (edit)
+
   activerecord:
     models:
       activity:

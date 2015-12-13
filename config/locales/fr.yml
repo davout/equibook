@@ -39,6 +39,21 @@ fr:
     destroy:
       destroyed: Cheval supprimé.
 
+  activities:
+    index:
+      title: "Activités de %{horse}"
+      add: Nouvelle activité pour %{horse}
+
+    edit:
+      title: "Éditer \"%{activity}\""
+
+    new:
+      title: Nouvelle activité pour %{horse}
+
+    activity:
+      by: "Par %{author}, le %{on}"
+      edit: (éditer)
+
   activerecord:
     models:
       activity:

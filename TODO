@@ -10,3 +10,9 @@ Activities
  - Editable by admin & author
  - Enforce edit rights
  - Assign authors correctly
+
+
+MASSIVE XSS ON ACTIVITIES DISPLAY
+
+Modifier les titres de pages quand on est sur un cavalier, un cheval, ou une activité
+

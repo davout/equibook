@@ -1,13 +1,1 @@
-.activity
-  %h1= @activity.title
-  .author= @activity.user.name
-
-  .bounds
-    = @activity.start_at
-    = '-'
-    = @activity.end_at
-
-  .description!= @activity.description
-
-  = if @activity.editable_by? current_user
-    = link_to t('.edit'), edit_horse_activity_path(@horse, @activity)
+= render partial: 'activities/activity', object: @activity

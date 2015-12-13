@@ -1,7 +1,3 @@
-%h1 Editing Activity
-
+%h1= t('.title', activity: @activity.title)
 = render 'form'
 
-= link_to 'Show', horse_activity_path(@horse, @activity)
-|
-= link_to 'Back', horse_activities_path(@horse)

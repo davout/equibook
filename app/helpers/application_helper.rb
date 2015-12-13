@@ -18,4 +18,8 @@ module ApplicationHelper
     html.html_safe
   end
 
+  def user_link(user)
+    link_to(user.name, '#')
+  end
+
 end

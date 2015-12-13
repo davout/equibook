@@ -23,3 +23,6 @@
 
 // Otherwise, the rich text editor goes over the datepickers
 .fr-box { z-index: 1; }
+
+// Do not put ugly underline below links
+a:hover { text-decoration: none; }
