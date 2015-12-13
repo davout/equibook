@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :images
+  resources :images, only: [:show, :create]
+
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
 
   resources :horses do

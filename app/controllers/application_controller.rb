@@ -15,7 +15,11 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    request.env['omniauth.origin'] || stored_location_for(resource) || horses_path
+    # Make sure we won't be redirecting users to the sign in page after they correctly
+    # authenticate with Facebook
+    omniauth_origin = request.env['omniauth.origin'] unless (request.env['omniauth.origin'] == new_user_session_url)
+
+    omniauth_origin || stored_location_for(resource) || horses_path
   end
 
 end

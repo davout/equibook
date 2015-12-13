@@ -18,10 +18,10 @@ en:
   horses:
     index:
       your_horses: Your horses
-      you_have_horses: You have %{count} hawrses.
+      you_have_horses: You have %{count} horses.
       add_new_horse: Add a new one
     new:
-      new_horse: New hawrse
+      new_horse: New horse
     show:
       back: Back
       edit: Edit

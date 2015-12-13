@@ -17,11 +17,11 @@ fr:
 
   horses:
     index:
-      your_horses: Vos chlaves
-      you_have_horses: Vous avez %{count} chlaves.
-      add_new_horse: Ajouter un chlave
+      your_horses: Vos chevaux
+      you_have_horses: Vous avez %{count} chevaux.
+      add_new_horse: Ajouter un cheval
     new:
-      new_horse: Nouveau chlave
+      new_horse: Nouveau cheval
     show:
       back: Retour
       edit: Editer
@@ -33,11 +33,11 @@ fr:
     edit:
       edit: "Editer %{name}"
     create:
-      created: Chlave ajouté!
+      created: Cheval ajouté!
     update:
-      updated: Chlave mis à jour.
+      updated: Cheval mis à jour.
     destroy:
-      destroyed: Chlave supprimé.
+      destroyed: Cheval supprimé.
 
   activerecord:
     models:
@@ -103,7 +103,7 @@ fr:
        unknown: Inconnu
        mini_poney: Mini poney
        chti_poney: Poney moyen
-       cheval_de_troie: Chlave de Troie
+       cheval_de_troie: Cheval de Troie
        nain: Nain
 
   devise:

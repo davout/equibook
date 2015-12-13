@@ -7,10 +7,6 @@ class DatepickerInput < SimpleForm::Inputs::Base
     @builder.hidden_field(attribute_name)
   end
 
-  def raw_format_string
-    '%Y-%m-%d'
-  end
-
   def pretty_format_string
     I18n.t('date.formats.default')
   end

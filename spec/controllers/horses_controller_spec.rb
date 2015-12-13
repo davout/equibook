@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe HorsesController do
 
+  render_views
+
   context 'with an existing horse' do
     before do
       @user = FactoryGirl.build(:user)
