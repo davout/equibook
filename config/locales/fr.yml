@@ -10,10 +10,18 @@ fr:
       default_message: 'Vous devez corriger les erreurs ci-dessous afin de continuer'
 
   layouts:
-    header:
+    header_footer:
       sign_out: Déconnexion
       sign_in: Connexion
       admin: Administration
+      privacy_policy: Politique de confidentialité
+      terms_of_service: "Conditions d'utilisation"
+
+  pages:
+    privacy_policy:
+      title: Politique de confidentialité
+    terms_of_service:
+      title: "Conditions d'utilisation"
 
   horses:
     index:

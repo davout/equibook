@@ -14,7 +14,7 @@ class ImagesController < ApplicationController
     })
 
     if @image.save
-      render json: { link: @image.image.url, id: @image.id }, status: :created
+      render json: { link: @image.image.url(:medium), id: @image.id }, status: :created
     else
       render json: @image.errors, status: :unprocessable_entity
     end

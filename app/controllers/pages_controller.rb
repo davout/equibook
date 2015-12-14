@@ -7,5 +7,11 @@ class PagesController < ApplicationController
     redirect_to(horses_path) if current_user
   end
 
+  def privacy_policy
+  end
+
+  def terms_of_service
+  end
+
 end
 

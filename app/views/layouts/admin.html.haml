@@ -1,4 +1,4 @@
-= render layout: 'layouts/header' do
+= render layout: 'layouts/header_footer' do
   %ul.nav.nav-pills
     - %w{ user horse color gender }.each do |i|
       %li{ class: (request.path =~ /#{i}/) && "active" }= link_to(t("activerecord.models.#{i}.other"), send(:"admin_#{i}s_path"))

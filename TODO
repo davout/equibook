@@ -15,4 +15,7 @@ Activities
 MASSIVE XSS ON ACTIVITIES DISPLAY
 
 Modifier les titres de pages quand on est sur un cavalier, un cheval, ou une activité
+Tweet activities
+
+Check that activity associated image_ids actually belong to the user
 

@@ -6,9 +6,11 @@ class Activity < ActiveRecord::Base
   belongs_to :horse,
     dependent: :destroy
 
+  has_many :images,
+    as: :imageable
+
   validates :horse, :user, :title,
     presence: true
-
 
   #
   # Returns +true+ if the activity can be edited by the provided user

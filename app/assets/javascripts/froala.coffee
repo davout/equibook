@@ -37,5 +37,12 @@ $('a[href="https://froala.com/wysiwyg-editor"]').remove()
 
 $('textarea.text').on('froalaEditor.image.inserted', (e, editor, $img, response) ->
   new_image_id = JSON.parse(response)['id']
+
+  $('<input>').attr({
+    type: 'hidden',
+    name: 'activity[image_ids][]',
+    value: new_image_id
+  }).appendTo('form')
+
 )
 

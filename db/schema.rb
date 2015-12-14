@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151214090220) do
+ActiveRecord::Schema.define(version: 20151214213154) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "horse_id"
@@ -23,13 +23,6 @@ ActiveRecord::Schema.define(version: 20151214090220) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
-
-  create_table "activities_images", id: false, force: :cascade do |t|
-    t.integer "activity_id", null: false
-    t.integer "image_id",    null: false
-  end
-
-  add_index "activities_images", ["activity_id", "image_id"], name: "index_activities_images_on_activity_id_and_image_id", unique: true
 
   create_table "colors", force: :cascade do |t|
     t.string   "name"
@@ -77,6 +70,8 @@ ActiveRecord::Schema.define(version: 20151214090220) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "user_id"
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
   end
 
   create_table "users", force: :cascade do |t|

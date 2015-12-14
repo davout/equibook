@@ -10,10 +10,18 @@ en:
       default_message: 'Please review the problems below before continuing'
 
   layouts:
-    header:
+    header_footer:
       sign_out: Logout
       sign_in: Sign-in
       admin: Admin
+      privacy_policy: Privacy policy
+      terms_of_service: Terms of service
+
+  pages:
+    privacy_policy:
+      title: Privacy policy
+    terms_of_service:
+      title: Terms of service
 
   horses:
     index:

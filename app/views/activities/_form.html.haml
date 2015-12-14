@@ -7,5 +7,8 @@
   = f.input :end_at,      as: :datetimepicker
   = f.input :description, as: :richtext
 
+  - @activity.image_ids.each do |iid|
+    %input{ type: 'hidden', value: iid, name: 'activity[image_ids][]' }
+
   = f.button :submit
 

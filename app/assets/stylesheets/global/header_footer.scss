@@ -1,0 +1,72 @@
+#session-links {
+  margin-top: 2em;
+  margin-right: 1em;
+}
+
+#title {
+  margin-top: .5em;
+  margin-bottom: .7em;
+  background-image: image-url('logo.png');
+  height: 161px;
+  width: 170px;
+
+  a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: transparent;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+// Sticky footer
+
+$footer_height: 60px;
+$footer_text_color: #777;
+
+html {
+  position: relative;
+  min-height: 100%;
+
+  body {
+    margin-bottom: $footer_height;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: $footer-height;
+  width: 100%;
+  font-size: 80%;
+  color: $footer_text_color;
+
+  text-align: center;
+
+  a, a:hover {
+    color: $footer_text_color;
+  }
+
+  ul {
+    // Such hack, very vertically centered, wow
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    height: 20px;
+
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 2em;
+    }
+
+    li#twitter-follow {
+      position: relative;
+      top: 3px;
+    }
+  }
+}
+

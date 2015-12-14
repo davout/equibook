@@ -1,26 +1,26 @@
 @import 'bootstrap/bootstrap';
 
 #error_explanation {
-	h3 {
-		margin-top: 0;
-	}
+  h3 {
+    margin-top: 0;
+  }
 }
 
 .fb_avatar {
-	border-radius: 4px;
+  border-radius: 4px;
 }
 
 form.form-horizontal {
-	margin-top: 2em;
+  margin-top: 2em;
 
-	select.date {
-		width: 30%;
-		display: inline;
-	}
+  select.date {
+    width: 30%;
+    display: inline;
+  }
 
-	input[type=submit] {
-		@extend .col-sm-offset-2;
-	}
+  input[type=submit] {
+    @extend .col-sm-offset-2;
+  }
 }
 
 // Otherwise, the rich text editor goes over the datepickers
@@ -28,3 +28,4 @@ form.form-horizontal {
 
 // Do not put ugly underline below links
 a:hover { text-decoration: none; }
+
