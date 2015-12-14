@@ -85,6 +85,7 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     colorize (0.7.7)
+    crass (1.0.2)
     debug_inspector (0.0.2)
     devise-i18n (0.12.1)
     devise-i18n-views (0.3.7)
@@ -139,6 +140,8 @@ GEM
     net-ssh (3.0.1)
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
+    nokogumbo (1.4.6)
+      nokogiri
     oauth2 (1.0.0)
       faraday (>= 0.8, < 0.10)
       jwt (~> 1.0)
@@ -209,6 +212,10 @@ GEM
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    sanitize (4.0.1)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.4.4)
+      nokogumbo (~> 1.4.1)
     sass (3.4.19)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -286,6 +293,7 @@ DEPENDENCIES
   rails (= 4.2.5)
   recursive-open-struct
   rspec-rails
+  sanitize
   sass-rails (~> 5.0)
   simple_form
   simplecov

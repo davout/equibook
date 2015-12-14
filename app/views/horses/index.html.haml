@@ -4,7 +4,7 @@
 - if @horses.count > 0
   - @horses.each do |h|
     %ul
-      %li= link_to h.name, h
+      %li= link_to h.name, horse_activities_path(h, h.activities)
 
 %p
   = link_to t('.add_new_horse'), new_horse_path

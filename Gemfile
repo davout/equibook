@@ -19,6 +19,7 @@ gem 'google-analytics-rails'
 gem 'simple_form'
 gem 'wysiwyg-rails'
 gem 'paperclip'
+gem 'sanitize'
 
 group :development, :test do
   gem 'byebug'

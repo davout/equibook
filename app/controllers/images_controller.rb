@@ -8,10 +8,13 @@ class ImagesController < ApplicationController
   end
 
   def create
-    @image = Image.new({ image: params[:file] })
+    @image = Image.new({
+      image: params[:file],
+      user: current_user
+    })
 
     if @image.save
-      render json: { link: @image.image.url }, status: :created
+      render json: { link: @image.image.url, id: @image.id }, status: :created
     else
       render json: @image.errors, status: :unprocessable_entity
     end

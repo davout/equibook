@@ -29,10 +29,13 @@ fr_default_opts = {
   }
 }
 
-
 # Enable Froala editor
 $('textarea.text').froalaEditor(fr_default_opts)
 
 # Hide license
 $('a[href="https://froala.com/wysiwyg-editor"]').remove()
+
+$('textarea.text').on('froalaEditor.image.inserted', (e, editor, $img, response) ->
+  new_image_id = JSON.parse(response)['id']
+)
 
