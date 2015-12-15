@@ -1,9 +1,23 @@
+// Styles for photograph heaps
 .activity {
-  ul.images {
+  ul.photograph-heap {
     li {
+      margin-left: -10px;
       display: inline;
-      margin-left: 1em;
+
+      img {
+        box-shadow: 1px 1px 5px 1px #656565;
+        padding: 4px;
+        background: white;
+        position: relative;
+      }
+    }
+  }
+
+  h2 {
+    a, a:hover, a:visited {
+      color: inherit;
+      text-decoration: none;
     }
   }
 }
-

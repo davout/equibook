@@ -10,15 +10,18 @@ class HorsesController < ApplicationController
   # GET /horses/1
   # GET /horses/1.json
   def show
+    @subtitle = @horse.to_label
   end
 
   # GET /horses/new
   def new
     @horse = Horse.new
+    @subtitle = t('.new_horse')
   end
 
   # GET /horses/1/edit
   def edit
+    @subtitle = t('.edit', name: @horse.to_label)
   end
 
   # POST /horses

@@ -1,9 +1,6 @@
 FEATURES
 - Destroying horses should be reserved to owners
 
-BUGS
-- Erroneous message "Aleady signed in" when signing in
-
 - Check that dates are correctly rendered/recorded from UTC
 
 Activities
@@ -18,4 +15,13 @@ Modifier les titres de pages quand on est sur un cavalier, un cheval, ou une act
 Tweet activities
 
 Check that activity associated image_ids actually belong to the user
+
+
+Association chevaux/users
+====
+
+Owner peut inviter (qui?), via une auto-complete box. (Sinon e-mail uniquement)
+Cavalier peut rechercher un cheval
+Écran d'acceptation des invitations/rejet, gestion des demandes sur un cheval
+
 

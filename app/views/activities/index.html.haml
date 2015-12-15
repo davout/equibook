@@ -1,6 +1,9 @@
 %h1= t('.title', horse: @horse.to_label)
 
-%p= link_to(t('.add', horse: @horse.to_label), new_horse_activity_path(@horse))
+%p
+  = link_to(new_horse_activity_path(@horse), title: t('.add', horse: @horse.to_label)) do
+    %i.fa.fa-plus
+    = t('.add', horse: @horse.to_label)
 
 = render partial: 'activities/activity', collection: @activities
 

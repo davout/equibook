@@ -60,7 +60,7 @@ en:
 
     activity:
       by: "By %{author}, on %{on}"
-      edit: (edit)
+      edit: Edit
 
   activerecord:
     models:

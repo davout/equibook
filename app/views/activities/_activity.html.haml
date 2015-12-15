@@ -1,15 +1,19 @@
 .activity
-  %h2= activity.title
+  %h2
+    = link_to activity.title, horse_activity_path(activity.horse, activity)
+
   %p.author
     != t('.by', author: user_link(activity.user), on: l((activity.start_at || activity.created_at).to_date, format: :long))
     - if activity.user == current_user
-      = link_to t('.edit'), edit_horse_activity_path(@horse, activity)
+      = link_to edit_horse_activity_path(@horse, activity), title: t('.edit') do
+        %i.fa.fa-edit
 
   - unless activity.images.empty?
-    %ul.images
+    %ul.images.photograph-heap
       - activity.images.each do |i|
         %li= link_to image_tag(i.image.url(:thumb)), i.image.url(:original), target: '_blank'
 
-  %p.description!= activity.description
+  %p.description
+    != activity.description
 
 

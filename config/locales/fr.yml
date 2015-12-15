@@ -60,7 +60,7 @@ fr:
 
     activity:
       by: "Par %{author}, le %{on}"
-      edit: (éditer)
+      edit: Éditer
 
   activerecord:
     models:

@@ -22,5 +22,9 @@ class Horse < ActiveRecord::Base
     (height && CATEGORIES.find { |c| height >= c[0] }[1]) || :unknown
   end
 
+  def to_label
+    nick || name
+  end
+
 end
 

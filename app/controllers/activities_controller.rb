@@ -4,17 +4,21 @@ class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
 
   def index
+    @subtitle = t('.title', horse: @horse.to_label)
     @activities = @horse.activities.all
   end
 
   def show
+    @subtitle = @activity.title
   end
 
   def new
+    @subtitle = t('.title', horse: @horse.to_label)
     @activity = Activity.new
   end
 
   def edit
+    @subtitle = t('.title', activity: @activity.title)
   end
 
   def create
@@ -53,15 +57,15 @@ class ActivitiesController < ApplicationController
   end
 
   private
-    def set_horse
-      @horse = current_user.horses.find(params[:horse_id])
-    end
+  def set_horse
+    @horse = current_user.horses.find(params[:horse_id])
+  end
 
-    def set_activity
-      @activity = @horse.activities.find(params[:id])
-    end
+  def set_activity
+    @activity = @horse.activities.find(params[:id])
+  end
 
-    def activity_params
-      params.require(:activity).permit(:user_id, :start_at, :end_at, :title, :description, image_ids: [])
-    end
+  def activity_params
+    params.require(:activity).permit(:user_id, :start_at, :end_at, :title, :description, image_ids: [])
+  end
 end
