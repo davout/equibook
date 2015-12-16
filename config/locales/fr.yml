@@ -26,7 +26,16 @@ fr:
   horses:
     index:
       your_horses: Vos chevaux
-      you_have_horses: Vous avez %{count} chevaux.
+      you_have_horses:
+        one: Vous avez un cheval
+        other: Vous avez %{count} chevaux
+      years_old:
+        one: un an
+        other: "%{count} ans"
+      has_activities:
+        zero: "%{horse} n'a encore aucune activité enregistrée."
+        one: "%{horse} a une activité enregistrée."
+        other: "%{horse} a %{count} activités."
       add_new_horse: Ajouter un cheval
     new:
       new_horse: Nouveau cheval

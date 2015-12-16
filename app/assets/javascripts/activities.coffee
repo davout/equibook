@@ -3,9 +3,9 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $('.activity .photograph-heap li img').each( ->
-  rNum = Math.random() * 12 - 6
+  random_angle = Math.random() * 10 - 5
   $(this).css({
-    'transform':  'rotate('+rNum+'deg)',
-    'z-index':    '' + Math.floor(Math.random() * 100)
+    'transform':  'rotate(' + random_angle + 'deg)',
+    'z-index':    Math.floor(Math.random() * 100)
   })
 )

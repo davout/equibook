@@ -27,6 +27,8 @@
         - else
           = link_to t('.sign_in'), new_user_session_path
 
+        = link_to 'FR', { locale: 'fr' }
+        = link_to 'EN', { locale: 'en' }
 
       %h1#title
         = link_to root_path do

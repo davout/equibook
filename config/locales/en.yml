@@ -26,7 +26,16 @@ en:
   horses:
     index:
       your_horses: Your horses
-      you_have_horses: You have %{count} horses.
+      you_have_horses:
+        one: You have one horse
+        other: You have %{count} horses
+      years_old:
+        one: one year old
+        other: "%{count} years old"
+      has_activities:
+        zero: "%{horse} has no activities yet."
+        one: "%{horse} has one activity logged."
+        other: "%{horse} has %{count} activities."
       add_new_horse: Add a new one
     new:
       new_horse: New horse
@@ -56,7 +65,7 @@ en:
       title: "Edit \"%{activity}\""
 
     new:
-      add: New activity for %{horse}
+      title: New activity for %{horse}
 
     activity:
       by: "By %{author}, on %{on}"

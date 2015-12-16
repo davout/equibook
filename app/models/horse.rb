@@ -23,8 +23,13 @@ class Horse < ActiveRecord::Base
   end
 
   def to_label
-    nick || name
+    (!nick.blank? && nick) || name
   end
+
+  def age
+    Date.today.year - birth.year - ((Date.today < birth + (Date.today.year - birth.year).years) ? 1 : 0)
+  end
+
 
 end
 
