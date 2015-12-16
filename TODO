@@ -8,9 +8,6 @@ Activities
  - Enforce edit rights
  - Assign authors correctly
 
-
-MASSIVE XSS ON ACTIVITIES DISPLAY
-
 Modifier les titres de pages quand on est sur un cavalier, un cheval, ou une activité
 Tweet activities
 
@@ -24,4 +21,5 @@ Owner peut inviter (qui?), via une auto-complete box. (Sinon e-mail uniquement)
 Cavalier peut rechercher un cheval
 Écran d'acceptation des invitations/rejet, gestion des demandes sur un cheval
 
+Validate HTML
 
