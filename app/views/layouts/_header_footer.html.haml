@@ -42,7 +42,7 @@
         %li= link_to t('.privacy_policy'), privacy_policy_path
         %li= link_to t('.terms_of_service'), terms_of_service_path
         %li#twitter-follow
-          %a.twitter-follow-button{ href: 'https://twitter.com/EquiBookCo', 'data-size': 'small', 'data-show-screen-name': 'false', 'data-show-count': 'false' }
+          %a.twitter-follow-button{ href: 'https://twitter.com/EquiBookCo', 'data-size' => 'small', 'data-show-screen-name' => 'false', 'data-show-count' => 'false' }
 
     - if @require_admin_assets
       = javascript_include_tag 'admin', 'data-turbolinks-track' => true
