@@ -1,1 +1,5 @@
+= link_to horse_activities_path(@activity.horse) do
+  %i.fa.fa-arrow-left
+  = t('.back_to_horse', name: @activity.horse.to_label)
+
 = render partial: 'activities/activity', object: @activity, locals: { full_description: true }

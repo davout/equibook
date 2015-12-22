@@ -67,6 +67,9 @@ en:
     new:
       title: New activity for %{horse}
 
+    show:
+      back_to_horse: "All activities for %{name}"
+
     activity:
       by: "By %{author}, on %{on}"
       edit: Edit
