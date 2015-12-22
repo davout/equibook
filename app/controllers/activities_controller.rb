@@ -36,12 +36,12 @@ class ActivitiesController < ApplicationController
 
   def update
     @activity.update(activity_params)
-    respond_with(@activity)
+    respond_with(@horse, @activity)
   end
 
   def destroy
     @activity.destroy
-    respond_with(@activity)
+    respond_with(@horse, @activity)
   end
 
 

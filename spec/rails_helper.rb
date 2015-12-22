@@ -11,11 +11,15 @@ Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 ActiveRecord::Migration.maintain_test_schema!
 
+# Required for fixture_file_upload in FactoryGirl
+include ActionDispatch::TestProcess
+
 RSpec.configure do |config|
   config.use_transactional_fixtures = true
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
   config.include Devise::TestHelpers, type: :controller
   config.include ControllerHelpers, type: :controller
+  config.render_views
 end
 

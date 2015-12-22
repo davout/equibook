@@ -2,16 +2,29 @@ require 'rails_helper'
 
 RSpec.describe Activity do
 
-  describe '#editable_by?' do
-    before do
-      @activity = FactoryGirl.build(:activity)
+  context 'with an unsaved activity' do
+    before { @activity = FactoryGirl.build(:activity) }
+
+    describe '#editable_by?' do
+      it 'should return true when the activity author is the same as the user parameter' do
+        expect(@activity).to receive(:user).once.and_return(:foo)
+        expect(@activity.editable_by?(:foo)).to be(true)
+      end
     end
 
-    it 'should return true when the activity author is the same as the user parameter' do
-      expect(@activity).to receive(:user).once.and_return(:foo)
-      expect(@activity.editable_by?(:foo)).to be(true)
+    describe '#summary' do
+      it 'should properly (not) sanitize a short string' do
+        expect(@activity.summary).to_not match(/\.\.\./)
+      end
+
+      it 'should properly sanitize a long string' do
+        @activity.description = "<span>FooBar</span> " + Faker::Hipster.sentence(30)
+        expect(@activity.summary).to match(/^FooBar/)
+        expect(@activity.summary).to match(/\.\.\./)
+        expect(@activity.summary.split(' ').count).to eql(20)
+      end
     end
+
   end
-
 end
 

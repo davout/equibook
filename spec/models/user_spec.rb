@@ -11,7 +11,7 @@ RSpec.describe User do
           info: {
             name:   Faker::Name.name,
             email:  Faker::Internet.email,
-            image:  Faker::Lorem.word
+            image:  Faker::Hipster.word
           }
         }))
       end.to change { User.count }.by(1)
@@ -28,7 +28,7 @@ RSpec.describe User do
           info: {
             name:   Faker::Name.name,
             email:  email,
-            image:  Faker::Lorem.word
+            image:  Faker::Hipster.word
           }
         }))
       end.to_not change { User.count }
