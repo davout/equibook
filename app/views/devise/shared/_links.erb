@@ -1,4 +1,3 @@
-<div class="form-group">
 <div class="col-sm-offset-2 col-sm-10">
 <%- if controller_name != 'sessions' %>
 <%= link_to t(".sign_in", :default => "Sign in"), new_session_path(resource_name) %><br />
@@ -25,5 +24,4 @@
   <%= link_to t('.sign_in_with_provider', :provider => provider.to_s.titleize, :default => "Sign in with #{provider.to_s.titleize}"), omniauth_authorize_path(resource_name, provider) %><br />
   <% end -%>
 <% end -%>
-</div>
 </div>
