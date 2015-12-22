@@ -1,4 +1,7 @@
-FactoryGirl.define do  
+FactoryGirl.define do  factory :widget do
+    name "MyString"
+  end
+  
   factory :image do
   end
 

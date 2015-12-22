@@ -1,0 +1,28 @@
+%h2= t('.sign_in')
+
+= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-horizontal' }) do |f|
+  .form-group
+    = f.label :email, :class => "col-sm-2 control-label"
+    .col-sm-5
+      = f.email_field :email, :class => "form-control"
+
+  .form-group
+    = f.label :password, :class => "col-sm-2 control-label"
+    .col-sm-5
+      = f.password_field :password, :class => "form-control"
+
+  - if devise_mapping.rememberable?
+    .form-group
+      .col-sm-offset-2.col-sm-5
+        .checkbox
+          %label{ for: "user_remember_me" }
+            = f.check_box :remember_me
+            = t('.remember_me')
+
+  = f.submit t('.sign_in', :default => "Sign in"), :class => "btn btn-success" 
+
+%br
+
+= render "devise/shared/links"
+
+

@@ -10,13 +10,15 @@ class Horse < ActiveRecord::Base
   belongs_to :gender
   belongs_to :color
   belongs_to :owner, class_name: :User
-
-  has_and_belongs_to_many :users
+  has_and_belongs_to_many :riders, class_name: 'User'
 
   has_many :activities
 
   validates :name, :gender, :color, :birth, :owner,
     presence: true
+
+  before_validation :add_owner_to_riders,
+    on: :create
 
   def category
     (height && CATEGORIES.find { |c| height >= c[0] }[1]) || :unknown
@@ -30,6 +32,9 @@ class Horse < ActiveRecord::Base
     Date.today.year - birth.year - ((Date.today < birth + (Date.today.year - birth.year).years) ? 1 : 0)
   end
 
+  def add_owner_to_riders
+    riders << owner if (owner && !riders.include?(owner))
+  end
 
 end
 
