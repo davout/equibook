@@ -10,8 +10,11 @@
   - @horses.each do |horse|
     %ul.horses
       %li
-        = link_to horse_activities_path(horse) do
-          %h3= horse.name
+        %h3
+          = link_to horse.name, horse_activities_path(horse)
+          - if current_user == horse.owner
+            = link_to edit_horse_path(horse) do
+              %i.fa.fa-edit
 
         %p= "#{horse.gender.name}, #{horse.color.name.downcase}, #{t('.years_old', count: horse.age)}."
         %p= t('.has_activities', horse: horse.to_label, count: horse.activities.count)
