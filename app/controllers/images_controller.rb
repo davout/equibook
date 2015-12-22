@@ -1,15 +1,19 @@
 class ImagesController < ApplicationController
 
-  respond_to :json
+  # We really shouldn't have to do that...
+  before_filter { request.format = :json }
+
+  def index
+    @images = Image.all
+  end
 
   def show
     @image = Image.find(params[:id])
-    respond_with(@image)
   end
 
   def create
     @image = current_user.images.create({ image: params[:file] })
-    respond_with(@image)
+    render 'show.json', status: :created
   end
-
 end
+

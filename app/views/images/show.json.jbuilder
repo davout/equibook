@@ -1,2 +1,1 @@
-json.id @image.id
-json.link @image.image.url
+json.partial! 'image.json.jbuilder', { image: @image }
