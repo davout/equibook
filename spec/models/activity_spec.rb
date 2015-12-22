@@ -12,6 +12,13 @@ RSpec.describe Activity do
       end
     end
 
+    describe '#description' do
+      it 'should preserve src attributes in img tags' do
+        @activity.description = '<img src="http://example.com/image.png" foo="bar">'
+        expect(@activity.description).to eql('<img src="http://example.com/image.png">')
+      end
+    end
+
     describe '#summary' do
       it 'should properly (not) sanitize a short string' do
         expect(@activity.summary).to_not match(/\.\.\./)
