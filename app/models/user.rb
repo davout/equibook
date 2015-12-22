@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
   has_and_belongs_to_many :horses
 
+  has_many :images
+
   validates :email,
     presence: true,
     uniqueness: true

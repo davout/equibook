@@ -4,20 +4,12 @@ class ImagesController < ApplicationController
 
   def show
     @image = Image.find(params[:id])
-    render json: { link: @image.image.url }
+    respond_with(@image)
   end
 
   def create
-    @image = Image.new({
-      image: params[:file],
-      user: current_user
-    })
-
-    if @image.save
-      render json: { link: @image.image.url(:medium), id: @image.id }, status: :created
-    else
-      render json: @image.errors, status: :unprocessable_entity
-    end
+    @image = current_user.images.create({ image: params[:file] })
+    respond_with(@image)
   end
 
 end

@@ -2,8 +2,6 @@ require 'rails_helper'
 
 RSpec.describe Admin::HorsesController do
 
-  render_views
-
   context 'with an existing horse' do
     before do
       user = FactoryGirl.create(:user, admin: true)

@@ -35,6 +35,8 @@ class Activity < ActiveRecord::Base
   def summary
     sanitized = Sanitize.fragment(read_attribute(:description), SANITIZE_CONFIG_SUMMARY)
 
+    #byebug
+
     if sanitized.split(' ').count > SUMMARY_WORDCOUNT
       sanitized.gsub(/^\s*/, '').match(/^([^\s]+\s*){,#{SUMMARY_WORDCOUNT}}/)[0].gsub(/\s*$/, '') + '...'
     else
