@@ -9,6 +9,7 @@
 #= require plugins/font_size.min.js
 #= require plugins/fullscreen.min.js
 #= require plugins/image.min.js
+#= require plugins/image_manager.min.js
 #= require plugins/inline_style.min.js
 #= require plugins/line_breaker.min.js
 #= require plugins/link.min.js
@@ -27,6 +28,9 @@ fr_default_opts = {
   imageUploadParams: {
     'authenticity_token': $('meta[name=csrf-token]').attr('content')
   }
+
+  imageManagerLoadURL: '/images'
+
 }
 
 # Enable Froala editor
