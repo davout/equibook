@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'equibook'
-set :repo_url, 'git@bitbucket.org:davout/equibook.git'
+set :repo_url, 'git@github.com:davout/equibook'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
