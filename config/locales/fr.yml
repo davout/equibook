@@ -91,6 +91,9 @@ fr:
       gender:
         one: Genre
         other: Genres
+      rider:
+        one: Cavalier
+        other: Cavaliers
 
     attributes:
       activity:
@@ -128,6 +131,7 @@ fr:
         horsebit_size: Taille de mors
         strap_size: Taille de sangle
         comment: Commentaire
+        #riders: Cavaliers
       color:
         name: Nom
       gender:

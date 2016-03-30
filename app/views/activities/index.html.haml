@@ -5,6 +5,8 @@
     %i.fa.fa-plus
     = t('.add', horse: @horse.to_label)
 
+- if @activities.empty?
+  = t('.no_activities_yet')
 = render partial: 'activities/activity', collection: @activities
 
 

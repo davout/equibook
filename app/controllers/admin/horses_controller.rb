@@ -4,7 +4,7 @@ class Admin::HorsesController < Admin::ApplicationController
     config.columns = [:name, :nick, :owner, :gender, :color, :birth, :height, :category, :vet, :blacksmith, :dentist,
                       :osteopath, :blanket_size, :bridle_size, :horsebit_size, :strap_size, :comment]
 
-    config.list.columns = [:name, :nick, :gender, :category, :color, :birth]
+    config.list.columns = [:name, :nick, :owner, :gender, :category, :color, :birth]
 
     config.update.columns.exclude :category
     config.create.columns.exclude :category
@@ -21,6 +21,7 @@ class Admin::HorsesController < Admin::ApplicationController
     config.columns[:birth].form_ui = :date_picker
 
     config.nested.add_link(:activities)
+    config.nested.add_link(:riders)
 
   end
 end
